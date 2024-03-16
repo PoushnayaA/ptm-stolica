@@ -127,3 +127,66 @@ button,
 [type="submit"] {
   appearance: none;
 }
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+button svg {
+  fill: red;
+  stroke: red;
+}
+
+.button--red {
+  display: block;
+  padding: 12px 32px;
+  text-align: center;
+  border-radius: 4px;
+  margin: 30px auto;
+
+  background-color: $red;
+  color: $color-default-white;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
+  text-align: center;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $red-hover;
+  }
+
+  @include vp-768 {
+    margin: 30px 0;
+    max-width: 450px;
+  }
+}
+
+.button--transparent {
+background-color: transparent;
+border-radius: 25px;
+border: 2px solid $color-default-white;
+  width: 100%;
+  display: block;
+
+font-size: 20px;
+font-weight: 500;
+line-height: 17px;
+text-align: center;
+color: $color-default-white;
+
+padding: 10px;
+
+margin: 50px auto 20px;
+
+
+  @include vp-768 {
+    max-width: 450px;
+  }
+}
