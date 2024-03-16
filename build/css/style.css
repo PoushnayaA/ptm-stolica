@@ -1624,7 +1624,8 @@ button svg {
   width: 100%;
   height: auto;
   background-color: #ffffff;
-  right: -100%;
+  right: 0;
+  top: -100%;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   z-index: 1;
@@ -1641,18 +1642,23 @@ button svg {
 }
 
 #sidebar.active {
-  right: 0;
+  top: 0;
 }
 
-.main-header__links-wrapper {
-  display: none;
-}
 @media (min-width: 768px) {
   .main-header__links-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     gap: 20px;
+  }
+}
+.main-header__links-wrapper a {
+  display: none;
+}
+@media (min-width: 768px) {
+  .main-header__links-wrapper a {
+    display: block;
   }
 }
 .main-header__links-wrapper a:hover, .main-header__links-wrapper a:focus, .main-header__links-wrapper a:active {
