@@ -53,14 +53,22 @@
   }
 
   h2 {
-    font-size: 38px;
+    font-size: 28px;
     font-weight: 700;
-    line-height: 38px;
+    line-height: 30px;
     letter-spacing: 0em;
     text-align: left;
 
     color: $color-default-white;
     max-width: 820px;
+
+    margin-top: 15px;
+    margin-bottom: 10px;
+
+    @include vp-500 {
+      font-size: 38px;
+      line-height: 45px;
+    }
 
     @include vp-768 {
       font-size: 48px;
@@ -76,8 +84,8 @@
 
     text-align: left;
     color: $color-default-white;
-    margin-top: 24px;
-    margin-bottom: 0;
+    margin-top: 15px;
+    margin-bottom: 10px;
 
     @include vp-768 {
       font-size: 16px;
