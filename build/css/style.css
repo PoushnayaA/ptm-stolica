@@ -1869,6 +1869,7 @@ button svg {
   background-color: #ffffff;
   border-radius: 16px;
   padding: 16px;
+  color: #0A0A0A;
 }
 .products .products__item img {
   width: 100%;
@@ -1879,6 +1880,7 @@ button svg {
   font-weight: 700;
   line-height: 23px;
   text-align: left;
+  display: block;
 }
 .products .products__item span {
   font-size: 13px;
@@ -1886,19 +1888,23 @@ button svg {
   line-height: 14px;
   text-align: left;
   color: #ADB5BD;
+  display: block;
 }
 .products .products__item p {
   font-size: 20px;
   font-weight: 700;
   line-height: 22px;
   color: #C41F01;
+  display: block;
 }
 .products .products__item .button--red {
-  margin-bottom: 0;
+  margin-bottom: 0px;
 }
 
-.swiper-pagination {
-  display: none;
+@media (min-width: 1440px) {
+  .swiper-pagination {
+    display: none;
+  }
 }
 
 .footer {

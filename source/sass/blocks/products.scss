@@ -33,6 +33,11 @@
     background-color: $color-default-white;
     border-radius: 16px;
     padding: 16px;
+    // display: grid;
+    // grid-template-rows: 316px 70px 20px 30px;
+    // height: auto;
+    // max-height:max-content;
+    color: $color-black;
 
     img {
       width: 100%;
@@ -45,6 +50,7 @@
       line-height: 23px;
       text-align: left;
 
+display: block;
     }
 
     span {
@@ -53,7 +59,7 @@
       line-height: 14px;
       text-align: left;
       color: #ADB5BD;
-
+      display: block;
     }
 
     p {
@@ -61,15 +67,19 @@
       font-weight: 700;
       line-height: 22px;
       color: $red;
+      display: block;
     }
 
     .button--red {
-      margin-bottom: 0;
+      margin-bottom: 0px;
     }
   }
 }
 
 
 .swiper-pagination {
-  display: none;
+  @include vp-1440 {
+    display: none;
+  }
+
 }
