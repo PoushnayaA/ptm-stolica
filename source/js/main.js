@@ -47,7 +47,6 @@ const extra = document.querySelector('#extra');
 const contacts = document.querySelector('#contacts');
 
 const formLink = document.querySelector('a[href="#form"]');
-
 formLink.addEventListener('click', function(e) {
   e.preventDefault();
   form.scrollIntoView({
@@ -57,7 +56,17 @@ formLink.addEventListener('click', function(e) {
 });
 
 const vacanciesLink = document.querySelector('a[href="#vacancies"]');
+const vacanciesLinkD = document.querySelector('a[href="index.html#vacancies"]');
 vacanciesLink.addEventListener('click', function(e) {
+  e.preventDefault();
+  vacancies.scrollIntoView({
+    behavior: 'smooth',
+    block: 'start'
+  });
+  document.getElementById('sidebar').classList.remove('active');
+  document.querySelector('.wrapper').classList.remove('dark');
+});
+vacanciesLinkD.addEventListener('click', function(e) {
   e.preventDefault();
   vacancies.scrollIntoView({
     behavior: 'smooth',
@@ -68,7 +77,17 @@ vacanciesLink.addEventListener('click', function(e) {
 });
 
 const extraLink = document.querySelector('a[href="#extra"]');
+const extraLinkD = document.querySelector('a[href="index.html#extra"]');
 extraLink.addEventListener('click', function(e) {
+  e.preventDefault();
+  extra.scrollIntoView({
+    behavior: 'smooth',
+    block: 'start'
+  });
+  document.getElementById('sidebar').classList.remove('active');
+  document.querySelector('.wrapper').classList.remove('dark');
+});
+extraLinkD.addEventListener('click', function(e) {
   e.preventDefault();
   extra.scrollIntoView({
     behavior: 'smooth',
@@ -79,7 +98,17 @@ extraLink.addEventListener('click', function(e) {
 });
 
 const contactsLink = document.querySelector('a[href="#contacts"]');
+const contactsLinkD = document.querySelector('a[href="index.html#contacts"]');
 contactsLink.addEventListener('click', function(e) {
+  e.preventDefault();
+  contacts.scrollIntoView({
+    behavior: 'smooth',
+    block: 'start'
+  });
+  document.getElementById('sidebar').classList.remove('active');
+  document.querySelector('.wrapper').classList.remove('dark');
+});
+contactsLinkD.addEventListener('click', function(e) {
   e.preventDefault();
   contacts.scrollIntoView({
     behavior: 'smooth',
