@@ -1,0 +1,18 @@
+.clients {
+  padding: 30px 0 50px;
+
+  .container {
+    max-width: 1024px;
+  }
+
+  .clients__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+
+    @include vp-1024 {
+      gap: 30px;
+    }
+  }
+}

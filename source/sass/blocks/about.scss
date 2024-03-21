@@ -39,16 +39,3 @@
     }
   }
 }
-
-
-.title {
-font-size: 24px;
-font-weight: 700;
-line-height: 44px;
-text-align: center;
-
-
-@include vp-1024 {
-font-size: 40px;
-}
-}

@@ -82,6 +82,7 @@ select {
 
 // ie11 X removal
 input {
+
   &::-ms-clear,
   &::-ms-reveal {
     display: none;
@@ -100,7 +101,6 @@ input[type="search"]::-webkit-search-results-decoration {
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   margin: 0;
-
   appearance: none;
 }
 
@@ -169,24 +169,58 @@ button svg {
 }
 
 .button--transparent {
-background-color: transparent;
-border-radius: 25px;
-border: 2px solid $color-default-white;
+  background-color: transparent;
+  border-radius: 25px;
+  border: 2px solid $color-default-white;
   width: 100%;
   display: block;
 
-font-size: 20px;
-font-weight: 500;
-line-height: 17px;
-text-align: center;
-color: $color-default-white;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 17px;
+  text-align: center;
+  color: $color-default-white;
 
-padding: 10px;
+  padding: 10px;
 
-margin: 50px auto 20px;
+  margin: 50px auto 10px;
 
 
   @include vp-768 {
     max-width: 450px;
+  }
+
+  &:hover,
+    &:focus,
+    &:active {
+      opacity: 60%;
+    }
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 44px;
+  text-align: center;
+  margin: 10px 0;
+
+  @include vp-1024 {
+    font-size: 40px;
+  }
+}
+
+.extra-text {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 26px;
+  text-align: center;
+  color: $color-gray;
+  margin: 10px 0;
+
+  @include vp-1024 {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 26px;
+    // margin: 10px 0;
   }
 }

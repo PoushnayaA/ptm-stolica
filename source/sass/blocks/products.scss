@@ -4,6 +4,14 @@
 
   color: $color-default-white;
 
+  .button--transparent {
+    margin-top: 100px;
+
+    @include vp-1024 {
+      margin-top: 40px;
+    }
+  }
+
   .container {
     max-width: 1024px;
   }
@@ -78,8 +86,25 @@ display: block;
 
 
 .swiper-pagination {
-  @include vp-1440 {
+  @include vp-1024 {
     display: none;
   }
+bottom: 90px !important;
 
+.swiper-pagination-bullet {
+border: 1px solid $color-default-white;
+opacity: 60%;
+
+&:hover,
+    &:focus,
+    &:active {
+      opacity: 30%;
+      background-color: $color-default-white;
+    }
+}
+
+.swiper-pagination-bullet-active {
+  background-color: $color-default-white !important;
+  opacity: 100% !important;
+}
 }
