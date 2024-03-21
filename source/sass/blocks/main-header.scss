@@ -144,20 +144,19 @@
   position: fixed;
   top: 0;
   width: 100%;
-  height: auto;
-  // padding-bottom: 25px;
+  height: 100%;
   background-color: $color-default-white;
-  // right: -100%;
   right: 0;
   top: -100%;
   -moz-transition: all 0.5s;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   z-index: 10;
+  border-bottom-left-radius: 7px;
 
-  @include vp-768 {
+  @include vp-500 {
     max-width: 400px;
-    height: 100%;
+    height: max-content;
     padding-bottom: 0;
 
     font-size: 20px;
@@ -167,7 +166,6 @@
 }
 
 #sidebar.active {
-  // right: 0;
   top: 0;
 }
 
