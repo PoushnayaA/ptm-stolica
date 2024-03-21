@@ -1,0 +1,33 @@
+.vacancies {
+  padding: 30px 0 50px;
+  background-color: $color-background-gray;
+
+  color: $color-default-white;
+
+  .container {
+    max-width: 1024px;
+  }
+
+  .vacancies__wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    align-items: center;
+
+    @include vp-1024 {
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 26px;
+      text-align: center;
+
+      @include vp-1024 {
+        text-align: left;
+      }
+    }
+  }
+}

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Проект ПТМ столица">
+  <title>ПТМ Столица</title>
+
+  <!-- <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple.png">
+  <link rel="manifest" href="manifest.webmanifest"> -->
+
+  <link rel="stylesheet" href="css/style.min.css">
+
+  <link rel="preload" href="fonts/roboto-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/roboto-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/roboto-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="container">
+        <div class="main-header">
+          <div class="main-header__base">
+            <a href="index.html">
+              <svg width="174" height="33" viewBox="0 0 174 33" role="img">
+                <use href="img/sprite.svg#logo"></use>
+              </svg>
+            </a>
+            <div class="main-header__links-wrapper">
+              <a href="tel:+74996851583">+7 (499) 685-15-83</a>
+              <a href="mailto:info@ptm-stolica.ru">info@ptm-stolica.ru</a>
+              <button type="button" data-button="open" onclick="openMenu()">
+                Меню
+              </button>
+            </div>
+          </div>
+          <div class="main-header__navigation" id="sidebar">
+            <div class="main-header__navigation-button">
+              <a href="index.html">
+                <svg width="174" height="33" viewBox="0 0 174 33" role="img">
+                  <use href="img/sprite.svg#logo"></use>
+                </svg>
+              </a>
+              <button type="button" data-button="close" onclick="closeMenu()">
+                <span class="visually-hidden">Закрыть меню.</span>
+                <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M.293 18.291a1 1 0 101.414 1.414L10 11.413l8.292 8.292a1 1 0 101.414-1.414l-8.292-8.292 8.292-8.292A1 1 0 1018.291.293L9.999 8.585 1.707.293A1 1 0 10.293 1.707L8.585 10 .293 18.291z" />
+                </svg>
+              </button>
+            </div>
+            <ul class="main-header__navigation-list">
+              <li>
+                <a href="#">
+                  Аренда техники
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Покупка техники
+                </a>
+              </li>
+              <li>
+                <a href="news.html">
+                  Новости
+                </a>
+              </li>
+              <li>
+                <a href="index.html#vacancies">
+                  Вакансии
+                </a>
+              </li>
+              <li>
+                <a href="index.html#extra">
+                  Дополнительная информация
+                </a>
+              </li>
+              <li>
+                <a href="index.html#contacts">
+                  Контакты
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="news news--list">
+        <div class="container">
+          <h1 class="title">Новости</h1>
+          <!-- <div class="news__container"> -->
+            <ul class="news__list">
+              <li>
+                <h3>Мы работаем не только в Москве и области</h3>
+                <p>При долгосрочной аренде мы можем доставить нашу технику в любой город Центральной России:
+                  Санкт-Петербург, Нижний Новгород...</p>
+                <div>
+                  <a href="#">Читать далее</a>
+                  <span>21.03.2024</span>
+                </div>
+              </li>
+              <li>
+                <h3>Перевозка строительной техники низкорамным тралом MAN TGA 18.350</h3>
+                <p>Погрузочная высота: 0,86м; масса перевозимого груза: 26т; стоимость аренды по Москве: 13.000 руб...
+                </p>
+                <div>
+                  <a href="#">Читать далее</a>
+                  <span>17.03.2024</span>
+                </div>
+              </li>
+              <li>
+                <h3>Внимание!</h3>
+                <p>В связи с реорганизацией фирмы, мы распродаем часть нашей техники....</p>
+                <div>
+                  <a href="#">Читать далее</a>
+                  <span>02.03.2024</span>
+                </div>
+              </li>
+              <li>
+                <h3>Мы работаем не только в Москве и области</h3>
+                <p>При долгосрочной аренде мы можем доставить нашу технику в любой город Центральной России:
+                  Санкт-Петербург, Нижний Новгород...</p>
+                <div>
+                  <a href="#">Читать далее</a>
+                  <span>21.03.2024</span>
+                </div>
+              </li>
+              <li>
+                <h3>Перевозка строительной техники низкорамным тралом MAN TGA 18.350</h3>
+                <p>Погрузочная высота: 0,86м; масса перевозимого груза: 26т; стоимость аренды по Москве: 13.000 руб...
+                </p>
+                <div>
+                  <a href="#">Читать далее</a>
+                  <span>17.03.2024</span>
+                </div>
+              </li>
+              <li>
+                <h3>Внимание!</h3>
+                <p>В связи с реорганизацией фирмы, мы распродаем часть нашей техники....</p>
+                <div>
+                  <a href="#">Читать далее</a>
+                  <span>02.03.2024</span>
+                </div>
+              </li>
+            </ul>
+            <!-- <img src="./img/rules.jpeg"> -->
+          <!-- </div> -->
+
+        </div>
+      </section>
+      <section id="form" class="form">
+        <div class="container">
+          <div class="form__wrapper">
+            <div class="form__container">
+              <h1 class="title">Есть вопросы? <br>Оставьте заявку!</h1>
+              <p>
+                Наш менеджер свяжется с вами в ближайшее время и ответит на все ваши вопросы. Первая консультация
+                совершенно бесплатная
+              </p>
+            </div>
+            <div class="form__block">
+              <form>
+                <div class="form__item">
+                  <label data-input="name">
+                    <input type="text" placeholder="Как к Вам обращаться?" required>
+                  </label>
+                </div>
+                <div class="form__item">
+                  <label data-input="email">
+                    <input type="text" placeholder="Номер телефона" required>
+                  </label>
+                </div>
+                <div class="form__item form__item--checkbox">
+                  <label class="checkbox" data-input="checkbox">
+                    <input class="checkbox__input" type="checkbox" name="agreement" />
+                    <div class="checkbox__checkmark"></div>
+                    <div class="checkbox__body">Даю согласие на обработку своих персональных данных&nbsp;*</div>
+                  </label>
+                </div>
+                <button class="button--red" type="submit">
+                  Заказать звонок
+                </button>
+              </form>
+            </div>
+          </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer">
+        <div class="container">
+          <ul class="footer__list">
+            <li>
+            <a href="https://yandex.ru/maps/213/moscow/house/baykalskaya_ulitsa_4/Z04YcQ9hQEQHQFtvfXRwd31rYw==/?ll=37.781910%2C55.816187&z=15.64">
+              Адрес офиса: Москва, ул. Байкальская 4, офис 105
+            </a>
+          </li>
+          <li>
+            <a href="tel:+74996851583">
+              Телефон: +7 (499) 685-15-83
+            </a>
+          </li>
+          <li>
+            <a href="mailto:info@ptm-stolica.ru">
+              E-mail: info@ptm-stolica.ru
+            </a>
+          </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    function openMenu() {
+      document.getElementById('sidebar').classList.add('active');
+      document.querySelector('.wrapper').classList.add('dark');
+    }
+    function closeMenu() {
+      document.getElementById('sidebar').classList.remove('active');
+      document.querySelector('.wrapper').classList.remove('dark');
+    }
+  </script>
+
+  <script src="js/vendor.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>
