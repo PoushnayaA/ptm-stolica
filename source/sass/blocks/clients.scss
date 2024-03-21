@@ -10,6 +10,8 @@
     align-items: center;
     justify-content: space-between;
     gap: 15px;
+    margin: 0;
+    padding: 0;
 
     @include vp-1024 {
       gap: 30px;

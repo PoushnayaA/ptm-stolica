@@ -2063,6 +2063,8 @@ button svg {
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 15px;
+  margin: 0;
+  padding: 0;
 }
 @media (min-width: 1024px) {
   .clients .clients__list {
