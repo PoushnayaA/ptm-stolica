@@ -1891,6 +1891,7 @@ button svg {
 }
 .products .products__list {
   padding: 0;
+  margin: 0;
 }
 @media (min-width: 768px) {
   .products .products__list {
@@ -1966,8 +1967,10 @@ button svg {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  gap: 10px 0;
   position: relative;
+  margin: 0;
+  padding: 0;
   margin-bottom: 40px;
 }
 .products--page .products__list::after {
@@ -1990,6 +1993,14 @@ button svg {
 }
 .products--page .products__list a {
   margin-top: 5px;
+}
+.products--page .button--red {
+  background-color: #ffffff;
+  color: #C41F01;
+  border: 1px solid #C41F01;
+}
+.products--page .button--red:hover, .products--page .button--red:focus, .products--page .button--red:active {
+  opacity: 50%;
 }
 
 .rules {
