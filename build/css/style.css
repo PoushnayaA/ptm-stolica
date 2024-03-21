@@ -2817,6 +2817,10 @@ button svg {
   grid-auto-flow: column;
   text-align: center;
 }
+.accordion .accordion__list li.two-grid {
+  -ms-grid-columns: 1fr 2fr;
+  grid-template-columns: 1fr 2fr;
+}
 .accordion .accordion__list div {
   display: -webkit-box;
   display: -ms-flexbox;
