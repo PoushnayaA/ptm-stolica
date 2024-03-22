@@ -30,6 +30,8 @@ window.addEventListener('DOMContentLoaded', () => {
   const contacts = document.querySelector('#contacts');
   const product1 = document.querySelector('#type-1');
   const product2 = document.querySelector('#type-2');
+  const product3 = document.querySelector('#type-3');
+  const product4 = document.querySelector('#type-4');
 
   scrollToSection(document.querySelector('a[href="#form"]'), form);
   scrollToSection(document.querySelector('a[href="#vacancies"]'), vacancies);
@@ -38,6 +40,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
   scrollToSection(document.querySelector('a[href="#type-1"]'), product1);
   scrollToSection(document.querySelector('a[href="#type-2"]'), product2);
+  scrollToSection(document.querySelector('a[href="#type-3"]'), product3);
+  scrollToSection(document.querySelector('a[href="#type-4"]'), product4);
 
   function equalizeHeights() {
     const items = document.querySelectorAll('.products__item');

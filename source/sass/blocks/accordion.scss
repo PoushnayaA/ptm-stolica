@@ -182,6 +182,12 @@
     li.two-grid {
       grid-template-columns: 1fr 2fr;
     }
+    li.five-grid {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+    li.six-grid {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
 
     div {
       display: flex;
