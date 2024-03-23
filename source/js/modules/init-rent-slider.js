@@ -1,4 +1,4 @@
-const sliderRent = document.querySelector('[data-slider="rent-swiper"]');
+const sliderRent = document.querySelector('[data-slider="vacancies-swiper"]');
 
 const initRentSlider = () => {
   if (sliderRent) {
@@ -18,13 +18,13 @@ const initRentSlider = () => {
         },
 
         768: {
-          slidesPerView: 2,
+          slidesPerView: 3,
           spaceBetween: 20,
         },
 
         320: {
-          slidesPerView: 1,
-          spaceBetween: 40,
+          slidesPerView: 2,
+          spaceBetween: 20,
         },
       },
     });

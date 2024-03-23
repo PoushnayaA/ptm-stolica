@@ -1,6 +1,6 @@
 import { iosVhFix } from './utils/ios-vh-fix';
 import { initRentSlider } from './modules/init-rent-slider';
-import { initSaleSlider } from './modules/init-sale-slider';
+// import { initSaleSlider } from './modules/init-sale-slider';
 
 import { initAccordions } from './modules/accordion/init-accordion';
 
@@ -8,7 +8,6 @@ import { initAccordions } from './modules/accordion/init-accordion';
 
 window.addEventListener('DOMContentLoaded', () => {
   initRentSlider();
-  initSaleSlider();
   initAccordions();
 
   iosVhFix();
@@ -24,24 +23,23 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  const form = document.querySelector('#form');
+  const forms = document.querySelector('#form');
   const vacancies = document.querySelector('#vacancies');
   const extra = document.querySelector('#extra');
   const contacts = document.querySelector('#contacts');
   const product1 = document.querySelector('#type-1');
-  const product2 = document.querySelector('#type-2');
-  const product3 = document.querySelector('#type-3');
-  const product4 = document.querySelector('#type-4');
 
-  scrollToSection(document.querySelector('a[href="#form"]'), form);
+const formLinks = document.querySelectorAll(`a[href="#form"]`);
+formLinks.forEach(i => {
+  scrollToSection(i, forms);
+})
+
+
+
   scrollToSection(document.querySelector('a[href="#vacancies"]'), vacancies);
   scrollToSection(document.querySelector('a[href="#extra"]'), extra);
   scrollToSection(document.querySelector('a[href="#contacts"]'), contacts);
-
   scrollToSection(document.querySelector('a[href="#type-1"]'), product1);
-  scrollToSection(document.querySelector('a[href="#type-2"]'), product2);
-  scrollToSection(document.querySelector('a[href="#type-3"]'), product3);
-  scrollToSection(document.querySelector('a[href="#type-4"]'), product4);
 
   function equalizeHeights() {
     const items = document.querySelectorAll('.products__item');
