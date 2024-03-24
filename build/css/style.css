@@ -2197,12 +2197,22 @@ button svg {
   font-weight: 700;
   line-height: 24px;
   text-align: left;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 40px;
 }
 .news .news__list li p {
   font-size: 18px;
   font-weight: 400;
   line-height: 24px;
   text-align: left;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 40px;
 }
 .news .news__list li div {
   display: -webkit-box;
@@ -2269,7 +2279,7 @@ button svg {
   margin: 30px 0;
 }
 .news--page .container {
-  max-width: unset;
+  max-width: 1024px;
 }
 .news--page .news__list {
   display: -ms-grid;
@@ -2309,6 +2319,21 @@ button svg {
   .news--page .button--red {
     margin: 0;
   }
+}
+.news--page .news__wrapper div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 30px;
+}
+.news--page .news__wrapper div span {
+  color: #5C5C5C;
 }
 
 .vacancies {
