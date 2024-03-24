@@ -28,18 +28,18 @@ window.addEventListener('DOMContentLoaded', () => {
   const extra = document.querySelector('#extra');
   const contacts = document.querySelector('#contacts');
   const product1 = document.querySelector('#type-1');
+  const map = document.querySelector('#map');
 
 const formLinks = document.querySelectorAll(`a[href="#form"]`);
 formLinks.forEach(i => {
   scrollToSection(i, forms);
 })
 
-
-
   scrollToSection(document.querySelector('a[href="#vacancies"]'), vacancies);
   scrollToSection(document.querySelector('a[href="#extra"]'), extra);
   scrollToSection(document.querySelector('a[href="#contacts"]'), contacts);
   scrollToSection(document.querySelector('a[href="#type-1"]'), product1);
+  scrollToSection(document.querySelector('a[href="#map"]'), map);
 
   function equalizeHeights() {
     const items = document.querySelectorAll('.products__item');

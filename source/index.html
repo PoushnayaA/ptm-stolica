@@ -8,10 +8,10 @@
   <meta name="description" content="Проект ПТМ столица">
   <title>ПТМ Столица</title>
 
-  <!-- <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple.png">
-  <link rel="manifest" href="manifest.webmanifest"> -->
+  <link rel="manifest" href="manifest.webmanifest">
 
   <link rel="stylesheet" href="css/style.min.css">
 
@@ -28,9 +28,11 @@
         <div class="main-header">
           <div class="main-header__base">
             <a href="index.html">
-              <svg width="174" height="33" viewBox="0 0 174 33" role="img">
+              <!-- <svg width="174" height="33" viewBox="0 0 174 33" role="img">
                 <use href="img/sprite.svg#logo"></use>
-              </svg>
+              </svg> -->
+
+              <img src="./img/logo.svg" width="174" height="33">
             </a>
             <div class="main-header__links-wrapper">
               <a href="tel:+74996851583">+7 (499) 685-15-83</a>
@@ -43,9 +45,10 @@
           <div class="main-header__navigation" id="sidebar">
             <div class="main-header__navigation-button">
               <a href="index.html">
-                <svg width="174" height="33" viewBox="0 0 174 33" role="img">
+                <!-- <svg width="174" height="33" viewBox="0 0 174 33" role="img">
                   <use href="img/sprite.svg#logo"></use>
-                </svg>
+                </svg> -->
+                <img src="./img/logo.svg" width="174" height="33">
               </a>
               <button type="button" data-button="close" onclick="closeMenu()">
                 <span class="visually-hidden">Закрыть меню.</span>
@@ -69,11 +72,6 @@
               <li>
                 <a href="#vacancies">
                   Вакансии
-                </a>
-              </li>
-              <li>
-                <a href="extra.html">
-                  Дополнительная информация
                 </a>
               </li>
               <li>
@@ -257,7 +255,7 @@
                 <p>При долгосрочной аренде мы можем доставить нашу технику в любой город Центральной России:
                   Санкт-Петербург, Нижний Новгород...</p>
                 <div>
-                  <a class="button--red" href="#">Читать далее</a>
+                  <a class="button--red" href="news-page.html">Читать далее</a>
                   <span>21.03.2024</span>
                 </div>
               </li>
@@ -266,7 +264,7 @@
                 <p>Погрузочная высота: 0,86м; масса перевозимого груза: 26т; стоимость аренды по Москве: 13.000 руб...
                 </p>
                 <div>
-                  <a class="button--red" href="#">Читать далее</a>
+                  <a class="button--red" href="news-page.html">Читать далее</a>
                   <span>17.03.2024</span>
                 </div>
               </li>
@@ -274,7 +272,7 @@
                 <h3>Внимание!</h3>
                 <p>В связи с реорганизацией фирмы, мы распродаем часть нашей техники....</p>
                 <div>
-                  <a class="button--red" href="#">Читать далее</a>
+                  <a class="button--red" href="news-page.html">Читать далее</a>
                   <span>02.03.2024</span>
                 </div>
               </li>
@@ -357,7 +355,7 @@
           <h1 class="title">Дополнительная информация</h1>
           <ul class="extra__list">
             <li>
-              <a href="#">
+              <a href="extra-manufacture.html">
                 <h2>
                   О производителе
                 </h2>
@@ -369,7 +367,7 @@
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="extra-sas.html">
                 <h2>
                   Система активной стабилизации - SAS
                 </h2>
@@ -381,19 +379,7 @@
               </a>
             </li>
             <li>
-              <a href="#">
-                <h2>
-                  Типы мачт
-                </h2>
-                <svg width="44" height="30" viewBox="0 0 44 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M0.125 15C0.125 14.5856 0.28962 14.1882 0.582646 13.8951C0.875671 13.6021 1.2731 13.4375 1.6875 13.4375L38.5406 13.4375L28.7062 3.60623C28.4129 3.31284 28.248 2.9149 28.248 2.49998C28.248 2.08506 28.4129 1.68713 28.7062 1.39373C28.9996 1.10033 29.3976 0.935507 29.8125 0.935507C30.2274 0.935507 30.6254 1.10033 30.9188 1.39373L43.4188 13.8937C43.5643 14.0389 43.6797 14.2113 43.7585 14.4011C43.8372 14.591 43.8778 14.7945 43.8778 15C43.8778 15.2055 43.8372 15.409 43.7585 15.5988C43.6797 15.7887 43.5643 15.9611 43.4188 16.1062L30.9188 28.6062C30.6254 28.8996 30.2274 29.0645 29.8125 29.0645C29.3976 29.0645 28.9996 28.8996 28.7062 28.6062C28.4129 28.3128 28.248 27.9149 28.248 27.5C28.248 27.0851 28.4129 26.6871 28.7062 26.3937L38.5406 16.5625H1.6875C1.2731 16.5625 0.875671 16.3979 0.582646 16.1048C0.28962 15.8118 0.125 15.4144 0.125 15Z"
-                    fill="#C41F01" />
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="#">
+              <a href="extra-tires.html">
                 <h2>
                   Шины
                 </h2>

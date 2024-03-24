@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Проект ПТМ столица">
+  <title>ПТМ Столица</title>
+
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
+
+  <link rel="stylesheet" href="css/style.min.css">
+
+  <link rel="preload" href="fonts/roboto-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/roboto-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/roboto-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="container">
+        <div class="main-header">
+          <div class="main-header__base">
+            <a href="index.html">
+              <svg width="174" height="33" viewBox="0 0 174 33" role="img">
+                <use href="img/sprite.svg#logo"></use>
+              </svg>
+            </a>
+            <div class="main-header__links-wrapper">
+              <a href="tel:+74996851583">+7 (499) 685-15-83</a>
+              <a href="mailto:info@ptm-stolica.ru">info@ptm-stolica.ru</a>
+              <button type="button" data-button="open" onclick="openMenu()">
+                Меню
+              </button>
+            </div>
+          </div>
+          <div class="main-header__navigation" id="sidebar">
+            <div class="main-header__navigation-button">
+              <a href="index.html">
+                <svg width="174" height="33" viewBox="0 0 174 33" role="img">
+                  <use href="img/sprite.svg#logo"></use>
+                </svg>
+              </a>
+              <button type="button" data-button="close" onclick="closeMenu()">
+                <span class="visually-hidden">Закрыть меню.</span>
+                <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M.293 18.291a1 1 0 101.414 1.414L10 11.413l8.292 8.292a1 1 0 101.414-1.414l-8.292-8.292 8.292-8.292A1 1 0 1018.291.293L9.999 8.585 1.707.293A1 1 0 10.293 1.707L8.585 10 .293 18.291z" />
+                </svg>
+              </button>
+            </div>
+            <ul class="main-header__navigation-list">
+              <li>
+                <a href="rent.html">
+                  Аренда техники
+                </a>
+              </li>
+              <li>
+                <a href="news.html">
+                  Новости
+                </a>
+              </li>
+              <li>
+                <a href="vacancies.html">
+                  Вакансии
+                </a>
+              </li>
+              <li>
+                <a href="contacts.html">
+                  Контакты
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="products products--page">
+        <div class="container">
+          <h1 class="title">Дополнительная информация</h1>
+          <div class="products__wrapper">
+            <ul class="products__list">
+              <li class="products__item">
+                <img src="./img/telehandlers.jpeg" width="264" height="316">
+                <div>
+                  <h2>Ознакомьтесь с шинами</h2>
+                  <a class="hero__button button button--red" href="index.html#extra">
+                    Вернуться назад
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+      </section>
+      <section class="catalog catalog--extra">
+        <div class="container">
+          <h1 class="title">Шины к погрузчикам</h1>
+          <div class="extra__wrapper">
+            <p>
+              Наша компания, предлагает различные типы шин для обеспечения устойчивой безперерывной работы погрузчиков, которые могут использоваться в зависимости от типа и сложности выполняемых работ
+            </p>
+            <ul class="accordion" data-accordion="parent">
+              <li class="accordion__element accordion__element--price" data-accordion="element">
+                <div class="accordion__container">
+                  <button class="accordion__button" type="button" data-accordion="button" aria-label="Открыть.">
+                    <div class="accordion__text-wrapper">
+                      <p>Шины моно-коушн 900</p>
+                    </div>
+                    <svg width="44" height="30" viewBox="0 0 44 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M0.125 15C0.125 14.5856 0.28962 14.1882 0.582646 13.8951C0.875671 13.6021 1.2731 13.4375 1.6875 13.4375L38.5406 13.4375L28.7062 3.60623C28.4129 3.31284 28.248 2.9149 28.248 2.49998C28.248 2.08506 28.4129 1.68713 28.7062 1.39373C28.9996 1.10033 29.3976 0.935507 29.8125 0.935507C30.2274 0.935507 30.6254 1.10033 30.9188 1.39373L43.4188 13.8937C43.5643 14.0389 43.6797 14.2113 43.7585 14.4011C43.8372 14.591 43.8778 14.7945 43.8778 15C43.8778 15.2055 43.8372 15.409 43.7585 15.5988C43.6797 15.7887 43.5643 15.9611 43.4188 16.1062L30.9188 28.6062C30.6254 28.8996 30.2274 29.0645 29.8125 29.0645C29.3976 29.0645 28.9996 28.8996 28.7062 28.6062C28.4129 28.3128 28.248 27.9149 28.248 27.5C28.248 27.0851 28.4129 26.6871 28.7062 26.3937L38.5406 16.5625H1.6875C1.2731 16.5625 0.875671 16.3979 0.582646 16.1048C0.28962 15.8118 0.125 15.4144 0.125 15Z"
+                        fill="#C41F01" />
+                    </svg>
+                  </button>
+                </div>
+                <div class="accordion__content" data-accordion="content">
+                  <div class="accordion__wrapper">
+                    <ul class="accordion__list">
+                      <li>
+                        <p>Модель</p>
+                        <p>Нор&shy;ма слой&shy;нос&shy;ти</p>
+                        <p>Ши&shy;ри&shy;на дис&shy;ка</p>
+                        <p>На&shy;руж&shy;ный диа&shy;метр, мм</p>
+                        <p>Ши&shy;ри&shy;на ши&shy;ны, мм</p>
+                        <p>Дав&shy;ле&shy;ние, бар</p>
+                        <p>Вес шины, кг</p>
+                      </li>
+                      <li>
+                        <p>5x8</p>
+                        <p>10</p>
+                        <p>3.00</p>
+                        <p>501</p>
+                        <p>145</p>
+                        <p>10.0</p>
+                        <p>8</p>
+                      </li>
+                      <li>
+                        <p>18x7-8</p>
+                        <p>16</p>
+                        <p>4.33</p>
+                        <p>496</p>
+                        <p>187</p>
+                        <p>10.0</p>
+                        <p>11</p>
+                      </li>
+                      <li>
+                        <p>6x9</p>
+                        <p>12</p>
+                        <p>4.00</p>
+                        <p>583</p>
+                        <p>178</p>
+                        <p>10.3</p>
+                        <p>11</p>
+                      </li>
+                      <li>
+                        <p>6.5x10</p>
+                        <p>10</p>
+                        <p>5.00</p>
+                        <p>638</p>
+                        <p>197</p>
+                        <p>7.9</p>
+                        <p>15</p>
+                      </li>
+                      <li>
+                        <p>23x9-10</p>
+                        <p>20</p>
+                        <p>6.50</p>
+                        <p>624</p>
+                        <p>254</p>
+                        <p>10.0</p>
+                        <p>24</p>
+                      </li>
+                      <li>
+                        <p>7x10-12</p>
+                        <p>14</p>
+                        <p>5.00</p>
+                        <p>728</p>
+                        <p>213</p>
+                        <p>10.0</p>
+                        <p>20</p>
+                      </li>
+                      <li>
+                        <p>23x10-12</p>
+                        <p>16</p>
+                        <p>8.00</p>
+                        <p>632</p>
+                        <p>282</p>
+                        <p>9.7</p>
+                        <p>21</p>
+                      </li>
+                      <li>
+                        <p>27x10-12</p>
+                        <p>16</p>
+                        <p>8.00</p>
+                        <p>727</p>
+                        <p>282</p>
+                        <p>9.0</p>
+                        <p>29</p>
+                      </li>
+                      <li>
+                        <p>7.5x15</p>
+                        <p>14</p>
+                        <p>6.00</p>
+                        <p>773</p>
+                        <p>221</p>
+                        <p>9.3</p>
+                        <p>24</p>
+                      </li>
+                      <li>
+                        <p>7.5x15</p>
+                        <p>14</p>
+                        <p>6.00</p>
+                        <p>808</p>
+                        <p>226</p>
+                        <p>9.7</p>
+                        <p>29</p>
+                      </li>
+                      <li>
+                        <p>28x9-15</p>
+                        <p>14</p>
+                        <p>7.00</p>
+                        <p>745</p>
+                        <p>245</p>
+                        <p>9.7</p>
+                        <p>25</p>
+                      </li>
+                      <li>
+                        <p>8.25x15</p>
+                        <p>14</p>
+                        <p>6.50</p>
+                        <p>903</p>
+                        <p>262</p>
+                        <p>8.3</p>
+                        <p>37</p>
+                      </li>
+                      <li>
+                        <p>250x15</p>
+                        <p>20</p>
+                        <p>7.50</p>
+                        <p>777</p>
+                        <p>277</p>
+                        <p>10.0</p>
+                        <p>39</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+            <h2>В поставляемых нашей организацией шинах, вы найдете следующие сочетания:</h2>
+            <ul class="information">
+              <li>Белые шины предназначены для сохранения и защиты полов, имеют немаловажные характеристики устойчивости к перегреву, легкого качения и хорошей грузоподъемности.</li>
+              <li>Шины стеклоткань применяются в условиях тяжелейшего применения, они устойчивы к порезам и расширению порезов, устойчивы, имеют хорошее вращение и грузоподъемность.</li>
+              <li>Маслостойкий тип шин применяется, где возможен контакт при работе с маслами, химическими веществами, не содержащими хлор жидкостями, и оказывает к ним высокую устойчивость.</li>
+              <li>Многокомпонентный тип шин идеально подходит для работы с высокими нагрузками, для дополнительной грузоподъемности, для работы на низких скоростях, идеален для использования на трейлерах, не подходит для использования на погрузчиках.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="contacts">
+      <div class="footer">
+        <div class="container">
+          <h1 class="title">Контакты</h1>
+          <ul class="footer__list">
+            <li>
+              <a
+                href="https://yandex.ru/maps/213/moscow/house/baykalskaya_ulitsa_4/Z04YcQ9hQEQHQFtvfXRwd31rYw==/?ll=37.781910%2C55.816187&z=15.64">
+                Адрес офиса: Москва, ул. Байкальская 4, офис 105
+              </a>
+            </li>
+            <li>
+              <a href="tel:+74996851583">
+                Телефоны: +7 (499) 685-15-83
+              </a>
+            </li>
+            <li>
+              <a href="tel:+79259203950">
+                +7 (925) 920-39-50
+              </a>
+            </li>
+            <li>
+              <a href="mailto:ptmstolitsa@yandex.ru">
+                E-mail: ptmstolitsa@yandex.ru
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    function openMenu() {
+      document.getElementById('sidebar').classList.add('active');
+      document.querySelector('.wrapper').classList.add('dark');
+    }
+    function closeMenu() {
+      document.getElementById('sidebar').classList.remove('active');
+      document.querySelector('.wrapper').classList.remove('dark');
+    }
+  </script>
+
+  <script src="js/vendor.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

@@ -61,3 +61,43 @@
     }
   }
 }
+
+.catalog--extra {
+  p {
+    color: $color-gray;
+    text-align: center;
+    margin: 30px;
+  }
+
+  h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  img {
+    margin: auto;
+  }
+
+  .extra__images {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 60px;
+    margin: 30px;
+
+    @include vp-500 {
+      flex-direction: row;
+    }
+
+    img {
+      margin: 0 auto;
+      width: 200px;
+      height: auto;
+
+      @include vp-500 {
+        flex-direction: row;
+        margin: 0;
+      }
+    }
+  }
+}

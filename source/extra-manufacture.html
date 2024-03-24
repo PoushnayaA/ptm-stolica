@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Проект ПТМ столица">
+  <title>ПТМ Столица</title>
+
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
+
+  <link rel="stylesheet" href="css/style.min.css">
+
+  <link rel="preload" href="fonts/roboto-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/roboto-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/roboto-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="container">
+        <div class="main-header">
+          <div class="main-header__base">
+            <a href="index.html">
+              <svg width="174" height="33" viewBox="0 0 174 33" role="img">
+                <use href="img/sprite.svg#logo"></use>
+              </svg>
+            </a>
+            <div class="main-header__links-wrapper">
+              <a href="tel:+74996851583">+7 (499) 685-15-83</a>
+              <a href="mailto:info@ptm-stolica.ru">info@ptm-stolica.ru</a>
+              <button type="button" data-button="open" onclick="openMenu()">
+                Меню
+              </button>
+            </div>
+          </div>
+          <div class="main-header__navigation" id="sidebar">
+            <div class="main-header__navigation-button">
+              <a href="index.html">
+                <svg width="174" height="33" viewBox="0 0 174 33" role="img">
+                  <use href="img/sprite.svg#logo"></use>
+                </svg>
+              </a>
+              <button type="button" data-button="close" onclick="closeMenu()">
+                <span class="visually-hidden">Закрыть меню.</span>
+                <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M.293 18.291a1 1 0 101.414 1.414L10 11.413l8.292 8.292a1 1 0 101.414-1.414l-8.292-8.292 8.292-8.292A1 1 0 1018.291.293L9.999 8.585 1.707.293A1 1 0 10.293 1.707L8.585 10 .293 18.291z" />
+                </svg>
+              </button>
+            </div>
+            <ul class="main-header__navigation-list">
+              <li>
+                <a href="rent.html">
+                  Аренда техники
+                </a>
+              </li>
+              <li>
+                <a href="news.html">
+                  Новости
+                </a>
+              </li>
+              <li>
+                <a href="vacancies.html">
+                  Вакансии
+                </a>
+              </li>
+              <li>
+                <a href="contacts.html">
+                  Контакты
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="products products--page">
+        <div class="container">
+          <h1 class="title">Дополнительная информация</h1>
+          <div class="products__wrapper">
+            <ul class="products__list">
+              <li class="products__item">
+                <img src="./img/small-sized.jpeg" width="264" height="316">
+                <div>
+                  <h2>Ознакомьтесь с производителем Toyota</h2>
+                  <a class="hero__button button button--red" href="index.html#extra">
+                    Вернуться назад
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+      </section>
+      <section class="catalog catalog--extra">
+        <div class="container">
+          <h1 class="title">О производителе Toyota</h1>
+          <div class="extra__wrapper">
+            <p>В Советском Союзе, а затем и России, накоплен значительный опыт эксплуатации погрузчиков Toyota. Эти
+              погрузчики наилучшим образом учитывают специфику работы в наших отечественных условиях. В связи с этим
+              подавляющее большинство погрузчиков, эксплуатируемых сегодня в России, имеют марку Toyota.</p>
+              <h2>Достоинства погрузчиков Toyota</h2>
+            <ul class="information">
+              <li>Синхронизация прохождения поворота, исключающая опрокидывание и занос;</li>
+              <li>Стабилизация положения задней оси с помощью дополнительного
+                гидроцилиндра и специального устройства слежения, гарантирующая
+                касание пола всеми четырьмя колесами погрузчика;</li>
+              <li>Автоматизированное управление углом наклона мачты вперед и скоростью наклона
+                назад, обеспечивающее надежность захвата груза;</li>
+              <li>Гидравлический замок, не допускающий опускание вил при выключенном двигателе;</li>
+              <li>Устройство поддержания давления в гидросистеме для обеспечения постоянной
+                работоспособности;</li>
+              <li>Автоматизированное управление установкой вил в горизонтальное положение,
+                облегчающее работу оператора;</li>
+              <li>Комплекс датчиков, контролирующих техническое состояние узлов погрузчика;
+                звуковая и световая индикация неисправностей.</li>
+            </ul>
+          </div>
+          <div class="extra__wrapper">
+            <img src="./img/manitou.jpg" width="400" height="300">
+            <h2>Достоинства штабелеров Toyota</h2>
+            <ul class="information">
+              <li>Признанный лидер в производстве складской техники для подъемно-транспортных работ - Toyota Industrial
+                Equipment - производит целую гамму штабелеров, предназначенной для проведения подъемно-транспортных
+                работ.
+              </li>
+              <li>Только ручных самоходных штабелеров типа Stacker производится около десятка видов. При этом каждая
+                модель выпускается в различных модификациях. Конструкция мачты и высота подъема груза, емкость зарядного
+                устройства, материал и количество опорных ходовых колес, длина вил, кнопки управления для правши и
+                левши,
+                дополнительные приборы - все может быть учтено при комплектации заказа.</li>
+              <li>В настоящее время выпускается новое поколение штабелеров. Их конструкция учитывает все современные
+                требования, а также накопленный опыт эксплуатации выпускаемых ранее штабелеров. При снижении габарита по
+                высоте клиренс увеличен на 25%. Улучшены характеристики, влияющие на производительность: скорости
+                передвижения штабелера, подъема и опускания груза. Увеличился максимальный угол преодолеваемого подъема.
+                Теперь штабелер легко проходит по более узким проездам и способен маневрировать на участках с малым
+                радиусом поворота. Выпускаемые в настоящее время модели еще более приспособлены для работы на складах с
+                увеличенной высотой стеллажей и в стесненных условиях.</li>
+              <li>Повышены меры безопасности. Рукоять управления снабжена кнопкой, которая при движении задним ходом в
+                случае возможного прижатия оператора к стене, не только отключает ходовой двигатель, но и включает
+                реверс.
+                Звуковой сигнал является базовой комплектацией для всех моделей.</li>
+            </ul>
+            <p>Все перечисленный особенности делают штабелеры Toyota незаменимыми для обработки грузов на поддонах в
+              крытых
+              стеллажных складах.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="contacts">
+      <div class="footer">
+        <div class="container">
+          <h1 class="title">Контакты</h1>
+          <ul class="footer__list">
+            <li>
+              <a
+                href="https://yandex.ru/maps/213/moscow/house/baykalskaya_ulitsa_4/Z04YcQ9hQEQHQFtvfXRwd31rYw==/?ll=37.781910%2C55.816187&z=15.64">
+                Адрес офиса: Москва, ул. Байкальская 4, офис 105
+              </a>
+            </li>
+            <li>
+              <a href="tel:+74996851583">
+                Телефоны: +7 (499) 685-15-83
+              </a>
+            </li>
+            <li>
+              <a href="tel:+79259203950">
+                +7 (925) 920-39-50
+              </a>
+            </li>
+            <li>
+              <a href="mailto:ptmstolitsa@yandex.ru">
+                E-mail: ptmstolitsa@yandex.ru
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    function openMenu() {
+      document.getElementById('sidebar').classList.add('active');
+      document.querySelector('.wrapper').classList.add('dark');
+    }
+    function closeMenu() {
+      document.getElementById('sidebar').classList.remove('active');
+      document.querySelector('.wrapper').classList.remove('dark');
+    }
+  </script>
+
+  <script src="js/vendor.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>
