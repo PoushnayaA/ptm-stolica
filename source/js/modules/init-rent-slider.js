@@ -22,8 +22,13 @@ const initRentSlider = () => {
           spaceBetween: 20,
         },
 
-        320: {
+        500: {
           slidesPerView: 2,
+          spaceBetween: 20,
+        },
+
+        320: {
+          slidesPerView: 1,
           spaceBetween: 20,
         },
       },

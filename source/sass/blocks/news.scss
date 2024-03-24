@@ -1,6 +1,15 @@
 .news {
   padding: 30px 0 50px;
 
+  .button--red {
+    background-color: $color-default-white;
+    border: 1px solid $red;
+    color: $red !important;
+    width: 200px;
+    font-weight: 500 !important;
+    margin: 0;
+  }
+
   .button--transparent {
     border-color: $color-black;
     color: $color-black;
@@ -52,6 +61,7 @@
       div {
         display: flex;
         justify-content: space-between;
+        align-items: center;
 
         span {
           font-size: 15px;
@@ -116,17 +126,21 @@
     grid-template-columns: 1fr;
     position: relative;
 
-    &::after {
-      content: "";
-      position: absolute;
-      height: 100%;
-      width: 1px;
-      background-color: $color-light-gray;
-      bottom: 0px;
-      left: 50%;
-      transform: translate(-50%, 0);
-      z-index: 9;
+    @include vp-1024 {
+      &::after {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 1px;
+        background-color: $color-light-gray;
+        bottom: 0px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        z-index: 9;
+      }
     }
+
+
 
 
     @include vp-1024 {
@@ -146,13 +160,13 @@
   }
 
   .button--red {
-    width: 100%;
+    // width: 100%;
 
-    color: $color-default-white !important;
+    // color: $color-default-white !important;
 
 
     @include vp-768 {
-      width: 200px;
+      // width: 200px;
       margin: 0;
 
     }

@@ -96,7 +96,7 @@ display: block;
   @include vp-1024 {
     display: none;
   }
-bottom: 90px !important;
+bottom: 85px !important;
 
 .swiper-pagination-bullet {
 border: 1px solid $color-default-white;
@@ -166,17 +166,5 @@ opacity: 60%;
       text-align: center;
     }
 
-  }
-
-  .button--red {
-    background-color: #ffffff;
-    color: $red;
-    border: 1px solid $red;
-
-    &:hover,
-    &:focus,
-    &:active {
-      opacity: 50%;
-    }
   }
 }

@@ -1950,7 +1950,7 @@ button svg {
 }
 
 .swiper-pagination {
-  bottom: 90px !important;
+  bottom: 85px !important;
 }
 @media (min-width: 1024px) {
   .swiper-pagination {
@@ -2014,14 +2014,6 @@ button svg {
 }
 .products--page .products__item h2 {
   text-align: center;
-}
-.products--page .button--red {
-  background-color: #ffffff;
-  color: #C41F01;
-  border: 1px solid #C41F01;
-}
-.products--page .button--red:hover, .products--page .button--red:focus, .products--page .button--red:active {
-  opacity: 50%;
 }
 
 .rules {
@@ -2158,6 +2150,14 @@ button svg {
 .news {
   padding: 30px 0 50px;
 }
+.news .button--red {
+  background-color: #ffffff;
+  border: 1px solid #C41F01;
+  color: #C41F01 !important;
+  width: 200px;
+  font-weight: 500 !important;
+  margin: 0;
+}
 .news .button--transparent {
   border-color: #0A0A0A;
   color: #0A0A0A;
@@ -2210,6 +2210,9 @@ button svg {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .news .news__list li div span {
   font-size: 15px;
@@ -2274,18 +2277,20 @@ button svg {
   grid-template-columns: 1fr;
   position: relative;
 }
-.news--page .news__list::after {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 1px;
-  background-color: #E0E0E0;
-  bottom: 0px;
-  left: 50%;
-  -webkit-transform: translate(-50%, 0);
-      -ms-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
-  z-index: 9;
+@media (min-width: 1024px) {
+  .news--page .news__list::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 1px;
+    background-color: #E0E0E0;
+    bottom: 0px;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+    z-index: 9;
+  }
 }
 @media (min-width: 1024px) {
   .news--page .news__list {
@@ -2299,24 +2304,20 @@ button svg {
     content: none;
   }
 }
-.news--page .button--red {
-  width: 100%;
-  color: #ffffff !important;
-}
 @media (min-width: 768px) {
   .news--page .button--red {
-    width: 200px;
     margin: 0;
   }
 }
 
 .vacancies {
-  padding: 30px 0 50px;
+  padding: 30px 0 20px;
   background-color: rgba(44, 47, 51, 0.8);
   color: #ffffff;
 }
 .vacancies .button--transparent {
   margin-bottom: 35px;
+  margin-top: 35px;
 }
 .vacancies p {
   text-align: center;
@@ -2412,6 +2413,8 @@ button svg {
   display: grid;
   -ms-grid-columns: 1fr;
   grid-template-columns: 1fr;
+  margin: 0;
+  padding: 0;
 }
 @media (min-width: 768px) {
   .catalog--vacancies .vacancies__list {
@@ -2994,6 +2997,7 @@ button svg {
           flex-direction: column;
   gap: 20px;
   padding: 15px 10px;
+  overflow: hidden;
 }
 .accordion .accordion__list li {
   display: -ms-grid;
@@ -3002,6 +3006,9 @@ button svg {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-auto-flow: column;
   text-align: center;
+  position: relative;
+}
+.accordion .accordion__list li p {
   position: relative;
 }
 .accordion .accordion__list li:not(:last-child)::after {
@@ -3015,8 +3022,38 @@ button svg {
 }
 .accordion .accordion__list li:first-of-type p {
   color: #0A0A0A;
+  font-size: 12px;
   opacity: 90%;
   text-transform: uppercase;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-height: 70px;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+  font-size: 10px;
+  -webkit-writing-mode: tb-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: tb-rl;
+}
+@media (min-width: 1024px) {
+  .accordion .accordion__list li:first-of-type p {
+    -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+            transform: rotate(0deg);
+    font-size: 12px;
+    -webkit-writing-mode: horizontal-tb;
+        -ms-writing-mode: lr-tb;
+            writing-mode: horizontal-tb;
+  }
 }
 .accordion .accordion__list div {
   display: -webkit-box;
