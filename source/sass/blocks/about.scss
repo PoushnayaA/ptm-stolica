@@ -14,7 +14,8 @@
 
     @include vp-1024 {
       height: 100%;
-      max-height: 508px;
+      max-height: inset;
+      max-height: max-content !important;
     }
   }
 

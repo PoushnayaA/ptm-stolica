@@ -1661,6 +1661,7 @@ button svg {
   background-color: #ffffff;
   right: 0;
   top: -100%;
+  opacity: 0;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   z-index: 10;
@@ -1680,6 +1681,7 @@ button svg {
 
 #sidebar.active {
   top: 0;
+  opacity: 100%;
 }
 
 @media (min-width: 768px) {
@@ -1741,6 +1743,35 @@ button svg {
   height: 100%;
   top: 0;
   left: 0;
+}
+
+.hero--error .container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+.hero--error .container .hero__wrapper,
+.hero--error .container .hero__text-wrapper {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.hero--error .container .hero__wrapper h2,
+.hero--error .container .hero__text-wrapper h2 {
+  font-size: 54px;
+  line-height: 60px;
+}
+@media (min-width: 500px) {
+  .hero--error .container .hero__wrapper h2,
+.hero--error .container .hero__text-wrapper h2 {
+    font-size: 74px;
+    line-height: 80px;
+  }
 }
 
 .hero__wrapper,
@@ -1825,7 +1856,10 @@ button svg {
 @media (min-width: 1024px) {
   .about img {
     height: 100%;
-    max-height: 508px;
+    max-height: inset;
+    max-height: -webkit-max-content !important;
+    max-height: -moz-max-content !important;
+    max-height: max-content !important;
   }
 }
 .about .about__wrapper {
@@ -2381,13 +2415,25 @@ button svg {
 }
 .vacancies .vacancies__list {
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  max-width: 850px;
+  gap: 20px;
+}
+@media (min-width: 768px) {
+  .vacancies .vacancies__list {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
 }
 .vacancies .vacancies__list li {
   background-color: #ffffff;
   border-radius: 16px;
   padding: 16px;
   color: #0A0A0A;
+  width: 100%;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
@@ -2396,6 +2442,10 @@ button svg {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
   height: auto !important;
 }
 .vacancies .vacancies__list li img {

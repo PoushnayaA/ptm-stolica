@@ -148,6 +148,7 @@
   background-color: $color-default-white;
   right: 0;
   top: -100%;
+  opacity: 0;
   -moz-transition: all 0.5s;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -168,6 +169,7 @@
 
 #sidebar.active {
   top: 0;
+  opacity: 100%;
 }
 
 .main-header__links-wrapper {

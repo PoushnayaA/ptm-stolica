@@ -1,13 +1,10 @@
 import { iosVhFix } from './utils/ios-vh-fix';
-import { initRentSlider } from './modules/init-rent-slider';
-// import { initSaleSlider } from './modules/init-sale-slider';
 
 import { initAccordions } from './modules/accordion/init-accordion';
 
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
-  initRentSlider();
   initAccordions();
 
   iosVhFix();
