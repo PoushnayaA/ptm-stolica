@@ -1242,7 +1242,7 @@ html {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  color: #000000;
+  color: #0A0A0A;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -1420,6 +1420,7 @@ button svg {
   line-height: 44px;
   text-align: center;
   margin: 10px 0;
+  color: #0A0A0A;
 }
 @media (min-width: 1024px) {
   .title {
