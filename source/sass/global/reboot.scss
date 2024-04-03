@@ -17,7 +17,7 @@ html {
   font-weight: 400;
   font-size: $fz-default;
   line-height: 24px;
-  color: $color-default-black;
+  color: $color-black;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -203,6 +203,7 @@ button svg {
   line-height: 44px;
   text-align: center;
   margin: 10px 0;
+  color: $color-black;
 
   @include vp-1024 {
     font-size: 40px;
