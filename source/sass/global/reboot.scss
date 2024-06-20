@@ -197,13 +197,17 @@ button svg {
     }
 }
 
+.disabled-button {
+  pointer-events: none;
+  opacity: 40%;
+}
+
 .title {
   font-size: 24px;
   font-weight: 700;
   line-height: 44px;
   text-align: center;
   margin: 10px 0;
-  color: $color-black;
 
   @include vp-1024 {
     font-size: 40px;

@@ -208,16 +208,16 @@
       </section>
       <section id="form" class="form">
         <div class="container">
-          <div class="form__wrapper">
+          <div class="form__wrapper form__wrapper--default">
             <div class="form__container">
               <h1 class="title">Есть вопросы? <br>Оставьте заявку!</h1>
               <p>
-                Наш менеджер свяжется с вами в ближайшее время и ответит на все ваши вопросы. Первая консультация
+                Наш менеджер свяжется с Вами в ближайшее время и ответит на все ваши вопросы. Первая консультация
                 совершенно бесплатная
               </p>
             </div>
             <div class="form__block">
-              <form action="php/process-form.php" method="post">
+              <form id="my-form">
                 <div class="form__item">
                   <label data-input="name">
                     <input id="name" name="name" type="text" placeholder="Как к Вам обращаться?" required>
@@ -235,12 +235,21 @@
                     <div class="checkbox__body">Даю согласие на обработку своих персональных данных&nbsp;*</div>
                   </label>
                 </div>
-                <button class="button--red" type="submit">
+                <button class="button--red button-form disabled-button" type="submit">
                   Заказать звонок
                 </button>
               </form>
             </div>
           </div>
+          <div class="form__wrapper form__wrapper--success visually-hidden">
+            <div class="form__container">
+              <h1 class="title">Спасибо за заявку!</h1>
+            </div>
+            <div class="form__block">
+              <p>Наш менеджер свяжется с Вами в ближайшее время!</p>
+            </div>
+          </div>
+        </div>
       </section>
       <section class="news">
         <div class="container">

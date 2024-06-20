@@ -2,12 +2,40 @@ import { iosVhFix } from './utils/ios-vh-fix';
 
 import { initAccordions } from './modules/accordion/init-accordion';
 
+import emailjs from 'emailjs-com';
+
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
   initAccordions();
 
   iosVhFix();
+
+  const nameInput = document.getElementById('name');
+  const phoneInput = document.getElementById('phone');
+  const agreementCheckbox = document.querySelector('input[name="agreement"]');
+  const submitButton = document.querySelector('.button-form');
+
+  function checkFormValidity() {
+    if (nameInput.value !== '' && phoneInput.value !== '' && agreementCheckbox.checked) {
+      submitButton.classList.remove('disabled-button');
+    } else {
+      submitButton.classList.add('disabled-button')
+    }
+  }
+
+  if (nameInput) {
+    nameInput.addEventListener('input', checkFormValidity);
+  }
+  if (phoneInput) {
+    phoneInput.addEventListener('input', checkFormValidity);
+  }
+  if (agreementCheckbox) {
+    agreementCheckbox.addEventListener('change', checkFormValidity);
+  }
+
+
+
 
   const scrollToSection = (link, section) => {
     if (link) {
@@ -20,12 +48,45 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   };
 
+  emailjs.init('CMQisLDrpcIk54EvP');
+  function sendEmail(event) {
+    event.preventDefault();
+
+    const form = event.target;
+    const formData = new FormData(form);
+
+    const templateParams = {
+      from_name: formData.get('name'),
+      from_phone: formData.get('phone'),
+    };
+
+    emailjs.send('service_kg6bi8v', 'template_u70e3xm', templateParams)
+      .then(function(response) {
+        console.log('Email sent successfully!', response.status, response.text);
+        form.reset();
+
+        document.querySelector('.form__wrapper--default').style.height = '0';
+        document.querySelector('.form__wrapper--default').style.opacity = '0';
+        document.querySelector('.form__wrapper--default').style.transition = 'all 0.5s';
+        document.querySelector('.form__wrapper--success').classList.remove('visually-hidden');
+
+      }, function(error) {
+        console.log('Error sending email:', error);
+
+      });
+  }
+
+
+  if (document.getElementById('my-form')) {
+    document.getElementById('my-form').addEventListener('submit', sendEmail);
+  }
+
   const forms = document.querySelector('#form');
   const vacancies = document.querySelector('#vacancies');
   const extra = document.querySelector('#extra');
   const contacts = document.querySelector('#contacts');
   const product1 = document.querySelector('#type-1');
-  const map = document.querySelector('#map');
+  const map = document.querySelector('#map-contact');
 
 const formLinks = document.querySelectorAll(`a[href="#form"]`);
 formLinks.forEach(i => {
@@ -36,7 +97,7 @@ formLinks.forEach(i => {
   scrollToSection(document.querySelector('a[href="#extra"]'), extra);
   scrollToSection(document.querySelector('a[href="#contacts"]'), contacts);
   scrollToSection(document.querySelector('a[href="#type-1"]'), product1);
-  scrollToSection(document.querySelector('a[href="#map"]'), map);
+  scrollToSection(document.querySelector('a[href="#map-contact"]'), map);
 
   function equalizeHeights() {
     const items = document.querySelectorAll('.products__item');
